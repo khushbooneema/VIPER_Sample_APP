@@ -20,7 +20,10 @@ class MovieInteractor: MovieInteractorProtocol {
     func fetchMovies() async throws -> [Movie] {
         //Read the data stored in the json file
         
-        guard let filename = Bundle.main.url(forResource: "movieData", withExtension: ".json") else { return [] }
+        guard let filename = Bundle.main.url(forResource: "movieData", withExtension: ".json") else {
+            throw ResponseError.fileNotFound
+        }
+        
         let data = try Data(contentsOf: filename)
         let decoder = JSONDecoder()
         let movies: [Movie] = try decoder.decode([Movie].self, from: data)
@@ -29,4 +32,11 @@ class MovieInteractor: MovieInteractorProtocol {
     }
     
     func fetchMoviesDetails(_ id: Int) async throws { }
+}
+
+
+enum ResponseError: Error {
+    case invalidResponse
+    case dataDecodingFailed
+    case fileNotFound
 }

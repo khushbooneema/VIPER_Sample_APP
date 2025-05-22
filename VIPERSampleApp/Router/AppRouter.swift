@@ -35,7 +35,7 @@ class TabRouter {
     
     var selectedTab = Tab.home.rawValue
     
-    func nagitate(to tab: Tab) {
+    func navigate(to tab: Tab) {
         selectedTab = tab.rawValue
     }
 }
