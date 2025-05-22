@@ -1,6 +1,6 @@
 # A VIPER Architecture Sample (SwiftUI)
 
-This is a simple iOS app built with **SwiftUI** to demonstrate the **VIPER architecture** in practice.
+This sample project demonstrates VIPER architecture applied to SwiftUI, for learning and exploration purposes. It’s meant to illustrate modular, testable, and scalable design in iOS apps.
 
 ## 📱 Features
 
