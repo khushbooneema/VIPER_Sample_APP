@@ -16,5 +16,5 @@ This app is built using the **VIPER** design pattern, which separates concerns a
 - **Interactor** – Handles business logic and data fetching.
 - **Presenter** – Processes data from the Interactor and prepares it for display.
 - **Entity** – Basic data models (e.g., `Movie`).
-- **Router** – Handles navigation and routing logic.
+- **Router** – Handles navigation and routing logic(Using navigationPath with TabView in SwiftUI)
 
